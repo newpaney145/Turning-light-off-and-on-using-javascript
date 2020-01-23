@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<style>
+    .hole
+    {
+        background-image: url(sag.jpg);
+      
+        background-repeat: no-repeat;
+        background-position:center;
+        height:500px;
+        
+    }
+    .hero
+    {
+        
+        margin-left:45%;
+        margin-top:30px;
+        width: 100px;
+    }
+</style>
+    <title>Document</title>
+</head>
+<body>
+    <div class="hole">
+    <form name="hope">
+        <h4 class="hero">currency u want to convert::</h4>
+        <select name="currency u want to convert" class="hero" id="nep" onchange="myfun">
+            <option value="american">american</option>
+            <option  value="nepali">nepali</option>
+        </select>
+        <h4 class="hero">amount:</h4>
+        <input  class="hero"name="sik" type="text" placeholder="....">
+        <h4 class="hero">currency u want..</h4>
+        <select  class="hero" name="currency conversion" id="pep" onchange="myfun">
+            <option value="american">american</option>
+            <option value="nepali">nepali</option>
+        </select>
+        <input type="text"  name="nik" class="hero" id="joke" placeholder="..."> 
+        <button type="button" onclick=insert(hope.sik.value) id="cock">CONVERT::</button>
+    </form>
+    </div>
+    <script>
+    var num;
+    var x;
+    var y;
+     function myfun()
+     {
+          x=document.getElementById('nep').value;
+          y=document.getElementById('pep').value;
+         
+     }
+       function insert(num)
+       {
+        myfun();
+           if((x=="american")&&(y=="american"))
+           {
+              
+               document.getElementById("joke").value=num;
+           }
+           else if((x=="american")&&(y=="nepali"))
+           {
+              document.getElementById("joke").value=num*114;
+           }
+           else if((x=="nepali")&&(y=="american"))
+           {
+               document.getElementById("joke").value=num/114;
+           }
+           else
+           {
+               document.getElementById("joke").value=num;
+           }
+       }   
+    </script>
+</body>
+</html>

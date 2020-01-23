@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Document</title>
+    <style>
+    button{
+        margin-left:6.5%;
+    }
+        </style>
+</head>
+<body>
+    <img id="nikku" src="bulb2.jpg" width="200" height="100"><br>
+    <button type="button" onclick="sagu()">on/off</button>
+    <script>
+        function sagu()
+        {
+            var i=document.getElementById("nikku");
+            if(i.src.match("sick"))
+            {
+                i.src="bulb2.jpg";
+            }
+            else
+            {
+                i.src="sick.gif";
+            }
+        }
+    </script>
+    
+</body>
+</html>
